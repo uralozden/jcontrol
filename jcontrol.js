@@ -8,50 +8,44 @@ $(".formkontrol").click(function(){
 
           if ($(element).val().trim() == $(element).attr("vtitle")) {
 
-            
-
             $(element).css("border","1px solid #900");
 
             error = true;
             return false;
+            
           }else{
 
               $(element).css("border","1px solid #E8E8E8");
 
               if ($("#"+formid+" .inputmail").val() == undefined){
 
-                error = false;
+                  error = false;
 
               }else{
 
-
-              if (reg.test($("#"+formid+" .inputmail").val()) == true) {
-                          
-                          error = false;
-                          
-
-                  }else{
-                          $("#"+formid+" .inputmail").css("border","1px solid #900");
-                          error = true;
-                          return false;
+                    if (reg.test($("#"+formid+" .inputmail").val()) == true) {
+                                
+                                error = false;                          
+      
+                        }else{
+                              $("#"+formid+" .inputmail").css("border","1px solid #900");
+           
+                              error = true;
+          
+                              return false;
                          
-                  }
-
+                     }
 
               }
 
-
          }
             
-
      });
 
       if (!error) {
         $("#"+formid).submit();
       };
       
-
       return false;
-
 
   });
