@@ -11,6 +11,7 @@ $(".formkontrol").click(function(){
             $(element).css("border","1px solid #900");
 
             error = true;
+            
             return false;
             
           }else{
@@ -26,7 +27,7 @@ $(".formkontrol").click(function(){
                     if (reg.test($("#"+formid+" .inputmail").val()) == true) {
                                 
                                 error = false;                          
-      
+
                         }else{
                               $("#"+formid+" .inputmail").css("border","1px solid #900");
            
@@ -35,9 +36,7 @@ $(".formkontrol").click(function(){
                               return false;
                          
                      }
-
               }
-
          }
             
      });
